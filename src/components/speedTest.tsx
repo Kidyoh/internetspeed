@@ -110,6 +110,7 @@ class SpeedTestComponent extends Component {
           </div>
         ) : (
           <div>
+            <div style={{height: '200px'}}>
             <Speedometer
               value={displayDownloadSpeed || 0}
               needleColor="red"
@@ -117,13 +118,12 @@ class SpeedTestComponent extends Component {
               endColor="red"
               segments={10}
               maxValue={100}
-              style={{ height: '200px' }}
-              
-             
             />
+            </div>
             <p>
               Download Speed: {formattedDownloadSpeed} Mbps ({bitsPerSecondDownloadSpeed} bps, {kilobitsPerSecondDownloadSpeed} kbps)
             </p>
+            <div style={{ height: '200px' }}>
             <Speedometer
               value={displayUploadSpeed || 0}
               needleColor="blue"
@@ -131,8 +131,8 @@ class SpeedTestComponent extends Component {
               endColor="blue"
               segments={10}
               maxValue={100}
-              style={{ height: '200px'}}
             />
+            </div>
             <p>
               Upload Speed: {formattedUploadSpeed} Mbps ({bitsPerSecondUploadSpeed} bps, {kilobitsPerSecondUploadSpeed} kbps)
             </p>
