@@ -110,7 +110,8 @@ class SpeedTestComponent extends Component {
           </div>
         ) : (
           <div>
-            <div style={{height: '200px'}}>
+           <div className='speedometer-container'>
+           <div style={{height: '200px'}}>
             <Speedometer
               value={displayDownloadSpeed || 0}
               needleColor="red"
@@ -133,6 +134,7 @@ class SpeedTestComponent extends Component {
               maxValue={100}
             />
             </div>
+           </div>
             <p>
               Upload Speed: {formattedUploadSpeed} Mbps ({bitsPerSecondUploadSpeed} bps, {kilobitsPerSecondUploadSpeed} kbps)
             </p>
